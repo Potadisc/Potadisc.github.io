@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kyox</title>
+  <link rel="preload" as="image" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/burger.png">
+  <link rel="preload" as="image" href="/x.png">
+</head>
+
+
+  
+<body id="body" style="background-color:black">
+
+
+  <div id="overlayshow"></div>  
+  <div id="backoverlay"></div>
+  <div id="overlay">
+    <button id="exitmenu" onclick="off()"></button>
+
+
+    <div id="links">
+      <a href="/" class="rb">Proxy</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="/bookmarklets" class="rb2">Bookmarklets</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="/github" class="rb3">Github</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="/credits" class="rb3">Credits</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="/pages" class="rb3">Pages</a>
+      <br>
+      <br>
+      <br>
+    </div>
+
+
+  
+</div>
+
+
+<button id="menu" onclick="on()"></button>
+<button id="invis"></button> 
+
+
+
+
+
+
+  
+  <div id="page">
+    <h1 id="title">Bookmarklets</h1>
+  
+    <p id="subtitle">To add a bookmarklet, drag the gold text to your bookmarks bar (ctrl + shift + b to show bookmarks bar)</p>
+    
+    <a href='javascript:(function(){var a=document.createElement("script");a.src="https://x-ray-goggles.mouse.org/webxray.js";a.className="webxray";a.setAttribute("data-lang","en-US");a.setAttribute("data-baseuri","https://x-ray-goggles.mouse.org");document.body.appendChild(a);}());'>Inspect single element</a>
+    <br>
+    <br>
+    <a href='javascript:(function()%7B(function()%20%7Bvar%20x%20%3D%20document.createElement(%22script%22)%3Bx.src%20%3D%20%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSnowLord7%2Fdevconsole%40master%2Fmain.js%22%3Bx.onload%20%3D%20alert(%22Loaded%20Developer%20Console!%22)%3Bdocument.head.appendChild(x)%3B%7D)()%7D)()
+'>Dev console 1</a>
+    <br>
+    <br>
+    <a href="javascript:var firebug=document.createElement('script');firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);">Dev console 2</a>
+    <br>
+    <br>
+    <a href="javascript:(function()%7Bjavascript%3Afunction%20gcloak()%20%7B%20var%20link%20%3D%20document.querySelector(%60link%5Brel*%3D'icon'%5D%60)%20%7C%7C%20document.createElement('link')%3Blink.type%20%3D%20'image%2Fx-icon'%3Blink.rel%20%3D%20'shortcut%20icon'%3Blink.href%20%3D%20'https%3A%2F%2Fwww.google.com%2Ffavicon.ico'%3Bdocument.title%20%3D%20'Google'%3Bconsole.log(document.title)%3Bdocument.getElementsByTagName('head')%5B0%5D.appendChild(link)%20%7D%3Bgcloak()%3BsetInterval(gcloak%2C%201000)%3B%7D)()%3B">Google cloak</a>
+    <br>
+    <br>
+    <a href='javascript:(function()%7B%5Bdocument%2C...%5B...document.querySelectorAll("iframe")%5D.map(iframe %3D> iframe.contentDocument).filter(iframe %3D> !!iframe)%5D.some(d %3D>%5B...d.querySelectorAll("video")%5D.filter(video %3D> video.paused %3D%3D false %26%26 video.ended %3D%3D false).some(video %3D> !!video.requestPictureInPicture().catch(err %3D> console.log(err))))%7D)()'>Picture in picture</a>
+    <br>
+    <br>
+    <a href='javascript:{var s=document.createElement("script");s.src="https://zalo.github.io/ctrl.js/bookmarklet.js",document.body.appendChild(s);};void(0);'>Computer control</a>
+    <br>
+    <br>
+    <a href="javascript:(function()%7Bdocument.getElementById('statusView').style.display %3D 'none'%7D)()%3B">Hide computer control popup</a>
+    <br>
+    <br>
+    <a href="javascript:(function()%7Bdocument.getElementById('statusView').style.display %3D 'block'%7D)()%3B">Show computer control popup</a>
+    <br>
+    <br>
+    <a href='javascript:var st = confirm("strict adblocker?"); if(st){var invisible = document.createElement("style"); invisible.innerHTML = "iframe{display:none} embed{display:none} object{display:none} frame{display:none}"; document.body.appendChild(invisible); setInterval(function(){var embeds = document.querySelectorAll("iframe, embed, frame, object"); for(i = 0; i < embeds.length; i++){embeds[i].remove()}}, 500)} else{var adblock = document.createElement("style"); adblock.innerHTML = "[src*=adserver] {display: none; } [src*=adlinks] {display: none;} [src*=adtech] {display:none;} [id*=google_ads] { display: none; } [src*=doubleclick.net] { display:none;} [src*=googlead] { display: none; } [href*=googlead] { display:none;} [src*=googlesyndication] { display: none;} [src*=ads.] { display: none; } [src*=.ad] {display: none; } [src*=ad.] {display:none;} [src*=adsmart] { display:none;}"; document.body.appendChild(adblock)} if(st){var elements = document.body.querySelectorAll("*"); for(i2 = 0; i2 < elements.length; i2++){if(elements[i2].id.includes("google_ads_iframe")){elements[i2].remove()}}} var x = document.getElementsByClassName("video-stream html5-main-video")[0]; function videoblock() { if(x.src.includes("pltype=adhost")) { x.currentTime = 999999999; }} setInterval(videoblock, 10)'>Adblock</a>
+    <br>
+    <a href='javascript:(function()%7Bvar URL %3D "iew-source%3A" %2B window.location.href%0Awindow.open(URL%2C "_blank")%3B%7D)()%3B'>View page source (add v to beginning of link)</a>
+    <br>
+    <p>Please note Kyox did not create all of these bookmarklets, and is not claiming ownership over any of them.</p>
+  </div>
+
+  <p id="test" style="display:none">1</p>
+  <p id="test2" style="display:none">100</p>
+  <p id="check" style="display:none">0</p>
+
+
+    <script src="/script.js"></script>
+</body>
+
+
+  
+  
+</html>
